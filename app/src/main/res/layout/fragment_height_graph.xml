@@ -47,22 +47,6 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/perimeter_view_line"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/graph"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"/>
-
-    <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,10 +56,33 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/perimeter_view_line"
         android:ems="10"
+        android:hint="@string/height"
         android:inputType="number"
+        android:padding="@dimen/edit_padding"
+        android:textColor="@color/white_dark"
+        android:textColorHint="@color/white_dark"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner"/>
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/perimeter_view_line"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:padding="@dimen/edit_padding"
+        android:textColor="@color/white_dark"
+        android:textColorHint="@color/white_dark"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"/>
 </android.support.constraint.ConstraintLayout>

@@ -13,9 +13,9 @@ import java.util.List;
 public class TabbedFragmentAdapter extends FragmentPagerAdapter {
     private List<String> mList;
 
-    public TabbedFragmentAdapter(FragmentManager fragmentManager, List<String> mList) {
+    public TabbedFragmentAdapter(FragmentManager fragmentManager, List<String> list) {
         super(fragmentManager);
-        this.mList = mList;
+        mList = list;
     }
 
     @Override

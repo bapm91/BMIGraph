@@ -32,6 +32,7 @@
     <string name="obese1">Obese Class I (Moderately obese)</string>
     <string name="obese2">Obese Class II (Severely obese)</string>
     <string name="obese3">Obese Class III (Very severely obese)</string>
+    <string name="date">Date</string>
     <!--profile bmi_fragment end-->
 
 </resources>
