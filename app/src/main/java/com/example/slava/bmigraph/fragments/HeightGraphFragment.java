@@ -27,6 +27,7 @@ public class HeightGraphFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_height_graph, container, false);
 
         GraphView graph = view.findViewById(R.id.graph);
+        graph.setBackgroundColor(getResources().getColor(R.color.white_dark));
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
