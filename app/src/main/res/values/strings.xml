@@ -1,5 +1,13 @@
 <resources>
+    <!--profile app start-->
     <string name="app_name">BMIGraph</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <!--profile app end-->
+
+    <!--profile adapter start-->
+    <string name="title_bmi_fragment">BMI</string>
+    <string name="title_weight_fragment">Weight</string>
+    <string name="title_height_fragment">Height</string>
+    <!--profile adapter end-->
+
 </resources>
