@@ -1,11 +1,9 @@
 package com.example.slava.bmigraph;
 
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import android.support.v4.view.ViewPager;
-import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -16,20 +14,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar mToolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        initTabbedActivity(getSupportActionBar());
+        initTabbedActivity();
     }
 
-    private void initTabbedActivity(ActionBar actionBar) {
+    private void initTabbedActivity() {
         List<String> list = new ArrayList<>();
         list.add(getString(R.string.title_bmi_fragment));
         list.add(getString(R.string.title_weight_fragment));

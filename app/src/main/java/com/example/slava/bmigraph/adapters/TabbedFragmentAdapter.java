@@ -1,11 +1,9 @@
 package com.example.slava.bmigraph.adapters;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.slava.bmigraph.MainActivity;
 import com.example.slava.bmigraph.fragments.BMIFragment;
 import com.example.slava.bmigraph.fragments.HeightGraphFragment;
 import com.example.slava.bmigraph.fragments.WeightGraphFragment;
