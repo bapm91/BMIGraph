@@ -13,4 +13,25 @@
     <string name="rotate">Rotate</string>
     <!--profile adapter end-->
 
+    <!--profile bmi_fragment start-->
+    <string name="some_et_empty">Height or Weight is empty</string>
+    <string name="result_format" formatted="false">W: %.1f\nH: %.1f\n %s</string>
+    <string name="bmi_result_format" formatted="false">BMI-index: %.1f\n%s</string>
+    <string name="some_wrong">Some wrong!</string>
+
+    <string name="regex_height">((1[3-9]\\d)|(2[0-4]\\d))(\\.\\d{1})?</string>
+    <string name="regex_weight">(([4-9]\\d)|(1\\d{2})|(2[0-4]\\d))(\\.\\d{1})?</string>
+    <string name="weight_wrong">Weight must be between 40.0 and 249.9</string>
+    <string name="height_wrong">Height must be between 130.0 and 249.9</string>
+
+    <string name="underweight3">Very severely underweight</string>
+    <string name="underweight2">Severely underweight</string>
+    <string name="underweight1">Underweight</string>
+    <string name="normal">Normal (healthy weight)</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese1">Obese Class I (Moderately obese)</string>
+    <string name="obese2">Obese Class II (Severely obese)</string>
+    <string name="obese3">Obese Class III (Very severely obese)</string>
+    <!--profile bmi_fragment end-->
+
 </resources>

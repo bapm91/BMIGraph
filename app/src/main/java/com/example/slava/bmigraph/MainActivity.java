@@ -1,6 +1,7 @@
 package com.example.slava.bmigraph;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -39,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
         viewPager.setAdapter(tabbed);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        if (tabLayout != null) {
+            tabLayout.setupWithViewPager(viewPager);
+        }
     }
 
     @Override

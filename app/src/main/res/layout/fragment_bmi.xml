@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/result_bmi_woman"
+        android:id="@+id/result_bmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -16,13 +16,13 @@
         android:minLines="4"
         android:textColor="@color/white_dark"
         android:textSize="@dimen/result"
-        app:layout_constraintBottom_toTopOf="@+id/rotate_bmi_woman"
+        app:layout_constraintBottom_toTopOf="@+id/rotate_bmi"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_height_woman"/>
+        app:layout_constraintTop_toBottomOf="@+id/enter_height"/>
 
     <Button
-        android:id="@+id/rotate_bmi_woman"
+        android:id="@+id/rotate_bmi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/button_grad"
@@ -31,10 +31,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result_bmi_woman"/>
+        app:layout_constraintTop_toBottomOf="@+id/result_bmi"/>
 
     <EditText
-        android:id="@+id/enter_weight_woman"
+        android:id="@+id/enter_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/edit_padding"
@@ -47,13 +47,13 @@
         android:textColorHint="@color/white_dark"
         android:textColor="@color/white_dark"
         android:background="@drawable/perimeter_view_line"
-        app:layout_constraintBottom_toTopOf="@+id/enter_height_woman"
+        app:layout_constraintBottom_toTopOf="@+id/enter_height"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/enter_height_woman"
+        android:id="@+id/enter_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="@dimen/edit_padding"
@@ -66,9 +66,9 @@
         android:textColorHint="@color/white_dark"
         android:textColor="@color/white_dark"
         android:background="@drawable/perimeter_view_line"
-        app:layout_constraintBottom_toTopOf="@+id/result_bmi_woman"
+        app:layout_constraintBottom_toTopOf="@+id/result_bmi"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_weight_woman"/>
+        app:layout_constraintTop_toBottomOf="@+id/enter_weight"/>
 
 </android.support.constraint.ConstraintLayout>
