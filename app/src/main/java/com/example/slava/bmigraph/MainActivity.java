@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         TabbedFragmentAdapter tabbed =
-                new TabbedFragmentAdapter(getSupportFragmentManager(), list, this);
+                new TabbedFragmentAdapter(getSupportFragmentManager(), list);
 
         // Set up the ViewPager with the sections adapter.
         ViewPager viewPager = (ViewPager) findViewById(R.id.container);
