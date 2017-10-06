@@ -55,9 +55,9 @@ public class SpinnerAdapter extends ArrayAdapter<String> {
         return row;
     }
 
-    private String getUser(int position){
+    private String getUser(int position) {
 
-        if (mUsers.length > 0 && position < mUsers.length){
+        if (mUsers.length > 0 && position < mUsers.length) {
             return mUsers[position];
         } else {
             return "No users";

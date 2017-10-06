@@ -20,6 +20,8 @@
     <string name="result_format" formatted="false">W: %.1f\nH: %.1f\n %s</string>
     <string name="bmi_result_format" formatted="false">BMI-index: %.1f\n%s</string>
     <string name="some_wrong">Some wrong!</string>
+    <string name="weight_hint">W:</string>
+    <string name="height_hint">H:</string>
 
     <string name="regex_height">((1[3-9]\\d)|(2[0-4]\\d))(\\.\\d{1})?</string>
     <string name="regex_weight">(([4-9]\\d)|(1\\d{2})|(2[0-4]\\d))(\\.\\d{1})?</string>

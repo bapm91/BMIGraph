@@ -112,11 +112,9 @@ public class MainActivity extends AppCompatActivity implements OnGraphSelectedLi
     public void onArticleSelected(int position, GraphFragment fragmentClass) {
         if (fragmentClass instanceof HeightGraphFragment) {
             WeightGraphFragment weightFragment = (WeightGraphFragment) mTabsFragmentAdapter.getItem(1);
-            Log.e("@@@", weightFragment.toString());
 //            weightFragment.updateArticleView(position);
         } else if (fragmentClass instanceof WeightGraphFragment) {
             HeightGraphFragment heightFragment = (HeightGraphFragment) mTabsFragmentAdapter.getItem(2);
-            Log.e("@@@", heightFragment.toString());
 //            heightFragment.updateArticleView(position);
         }
     }

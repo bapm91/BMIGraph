@@ -1,26 +1,17 @@
 package com.example.slava.bmigraph.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.slava.bmigraph.App;
 import com.example.slava.bmigraph.R;
 import com.example.slava.bmigraph.db.DatabaseHelper;
-import com.jjoe64.graphview.GraphView;
 
 import java.util.regex.Pattern;
 
 public class WeightGraphFragment extends GraphFragment {
-    {
-        Log.e("@@@", " ######"+ WeightGraphFragment.this.toString());
-    }
 
     public static WeightGraphFragment getInstance() {
         Bundle args = new Bundle();

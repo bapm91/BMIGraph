@@ -1,7 +1,6 @@
 package com.example.slava.bmigraph.fragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -13,9 +12,6 @@ import com.example.slava.bmigraph.db.DatabaseHelper;
 import java.util.regex.Pattern;
 
 public class HeightGraphFragment extends GraphFragment {
-    {
-        Log.e("@@@", "######"+HeightGraphFragment.this.toString());
-    }
 
     public static HeightGraphFragment getInstance() {
         Bundle args = new Bundle();

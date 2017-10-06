@@ -29,33 +29,17 @@ public class DbManager {
         return mDataBase.rawQuery("SELECT * FROM " + DatabaseHelper.TABLE_NAME, null);
     }
 
-    public String getAllDataToString(){
-        String result = "";
-        Cursor cursor = getAllData();
-        cursor.moveToFirst();
-
-        while (!cursor.isAfterLast()){
-            result += cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_1)) + " ";
-            result += cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_2)) + " ";
-            result += cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_3)) + " ";
-            result += cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_4)) + " ";
-            result += cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_5)) + " ";
-            result += "\n";
-            cursor.moveToNext();
-        }
-        cursor.close();
-        return result;
-    }
-
     public int getId(String user, String date) {
         String sql = "select " + DatabaseHelper.COL_1
                 + " from " + DatabaseHelper.TABLE_NAME
                 + " where users =? " + "and "
                 + DatabaseHelper.COL_3 + " =?";
+
         Cursor cursor = mDataBase.rawQuery(sql, new String[]{user, date});
         int id = cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_1));
 
-        return 0;
+        cursor.close();
+        return id;
     }
 
     public int[] getUsersData(String user, String databaseColumn){
@@ -115,5 +99,23 @@ public class DbManager {
                 contentValues,
                 DatabaseHelper.COL_1 + " = " + id,
                 null);
+    }
+
+    public String getAllDataToString(){
+        String result = "";
+        Cursor cursor = getAllData();
+        cursor.moveToFirst();
+
+        while (!cursor.isAfterLast()){
+            result += cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_1)) + " ";
+            result += cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_2)) + " ";
+            result += cursor.getString(cursor.getColumnIndex(DatabaseHelper.COL_3)) + " ";
+            result += cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_4)) + " ";
+            result += cursor.getInt(cursor.getColumnIndex(DatabaseHelper.COL_5)) + " ";
+            result += "\n";
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return result;
     }
 }

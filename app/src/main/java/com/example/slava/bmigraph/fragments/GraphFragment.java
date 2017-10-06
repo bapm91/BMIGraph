@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -88,13 +87,12 @@ public abstract class GraphFragment extends Fragment
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Log.e("###", "user = " + user + " users[0] = " + users[0], null);
         if (users.length > 0) {
             user = users[i];
             int[] usersData = getUsersData(getDataColumnName());
             setGraphView(getDataPoints(usersData));
 
-            mCallback.onArticleSelected(i, this);
+//            mCallback.onArticleSelected(i, this);
         }
     }
 
@@ -140,7 +138,6 @@ public abstract class GraphFragment extends Fragment
             setUsers();
             setGraphView(getDataPoints(getUsersData(getDataColumnName())));
             mEditText.setText("");
-            Log.e("@@@", "before CallBack " + user, null);
 //            mCallback.onArticleSelected(mSpinner.getSelectedItemPosition(), this);
         }
     }
@@ -148,7 +145,6 @@ public abstract class GraphFragment extends Fragment
     public void updateArticleView(int position) {
         setUsers();
         user = users[position];
-        Log.e("@@@", "after CallBack " + user + " and adapter " + mSpinnerAdapter.toString(), null);
 //        setSpinnerAdapter();
 //        mSpinnerAdapter.updateSpinner(user);
 //        mSpinner.setAdapter(mSpinnerAdapter);
