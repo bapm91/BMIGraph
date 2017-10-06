@@ -52,6 +52,7 @@
 
     <string name="regex_graph_height">1000|\\d{0,3}</string>
     <string name="graph_height_wrong">Height must be between 0 and 1000</string>
+    <string name="no_any_users">Please, add any user!</string>
     <!--profile weight_fragment end-->
 
 </resources>

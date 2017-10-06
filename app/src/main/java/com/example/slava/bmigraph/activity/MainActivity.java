@@ -31,6 +31,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements OnGraphSelectedListener {
 
     private TabsFragmentAdapter mTabsFragmentAdapter;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,30 @@ public class MainActivity extends AppCompatActivity implements OnGraphSelectedLi
         setSupportActionBar(toolbar);
     }
 
+    private void initTabbedActivity(int position) {
+
+        mTabsFragmentAdapter =
+                new TabsFragmentAdapter(getSupportFragmentManager(), getTabs());
+
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mTabsFragmentAdapter);
+        mViewPager.setCurrentItem(position);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        if (tabLayout != null) {
+            tabLayout.setupWithViewPager(mViewPager);
+
+        }
+    }
+
+    private List<String> getTabs(){
+        List<String> list = new ArrayList<>();
+        list.add(getString(R.string.title_bmi_fragment));
+        list.add(getString(R.string.title_weight_fragment));
+        list.add(getString(R.string.title_height_fragment));
+        return list;
+    }
+
     private void initTabbedActivity() {
         List<String> list = new ArrayList<>();
         list.add(getString(R.string.title_bmi_fragment));
@@ -53,14 +78,14 @@ public class MainActivity extends AppCompatActivity implements OnGraphSelectedLi
         list.add(getString(R.string.title_height_fragment));
 
         mTabsFragmentAdapter =
-                new TabsFragmentAdapter(getSupportFragmentManager(), list);
+                new TabsFragmentAdapter(getSupportFragmentManager(), getTabs());
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.container);
-        viewPager.setAdapter(mTabsFragmentAdapter);
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(mTabsFragmentAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         if (tabLayout != null) {
-            tabLayout.setupWithViewPager(viewPager);
+            tabLayout.setupWithViewPager(mViewPager);
         }
     }
 
@@ -90,7 +115,8 @@ public class MainActivity extends AppCompatActivity implements OnGraphSelectedLi
                                 public void onClick(DialogInterface dialog, int id) {
                                     App.getDbManager().insertData(input.getText().toString(),
                                             -1, -1);
-                                    initTabbedActivity();
+//                                    mViewPager.addView();
+                                    initTabbedActivity(mViewPager.getCurrentItem());
                                     dialog.cancel();
                                 }
                             })

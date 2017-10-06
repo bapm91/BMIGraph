@@ -11,9 +11,11 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.slava.bmigraph.App;
 import com.example.slava.bmigraph.R;
+import com.example.slava.bmigraph.activity.MainActivity;
 import com.example.slava.bmigraph.adapters.SpinnerAdapter;
 import com.example.slava.bmigraph.interfaces.OnGraphSelectedListener;
 import com.jjoe64.graphview.GraphView;
@@ -133,6 +135,10 @@ public abstract class GraphFragment extends Fragment
 
     @Override
     public void onClick(View view) {
+        if (App.getDbManager().getAllUsers().length == 0){
+            Toast.makeText(getContext(), getString(R.string.no_any_users), Toast.LENGTH_SHORT).show();
+            return;
+        }
         if (isInputRight()) {
             insertData();
             setUsers();
