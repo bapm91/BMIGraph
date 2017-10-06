@@ -10,10 +10,10 @@ import com.example.slava.bmigraph.fragments.WeightGraphFragment;
 
 import java.util.List;
 
-public class TabbedFragmentAdapter extends FragmentPagerAdapter {
+public class TabsFragmentAdapter extends FragmentPagerAdapter {
     private List<String> mList;
 
-    public TabbedFragmentAdapter(FragmentManager fragmentManager, List<String> list) {
+    public TabsFragmentAdapter(FragmentManager fragmentManager, List<String> list) {
         super(fragmentManager);
         mList = list;
     }

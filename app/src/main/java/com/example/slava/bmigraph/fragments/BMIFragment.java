@@ -31,13 +31,19 @@ public class BMIFragment extends Fragment {
         return fragment;
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bmi, container, false);
 
-
         findViews(view);
+
         mBtRotate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

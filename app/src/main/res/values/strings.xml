@@ -2,6 +2,8 @@
     <!--profile app start-->
     <string name="app_name">BMIGraph</string>
     <string name="action_settings">Settings</string>
+
+    <string name="action_add_user">Add user</string>
     <!--profile app end-->
 
     <!--profile adapter start-->
@@ -33,6 +35,21 @@
     <string name="obese2">Obese Class II (Severely obese)</string>
     <string name="obese3">Obese Class III (Very severely obese)</string>
     <string name="date">Date</string>
+    <string name="add_point">Add Point</string>
     <!--profile bmi_fragment end-->
+
+    <!--profile weight_fragment start-->
+    <string name="weight_et_empty">Weight is empty</string>
+
+    <string name="regex_graph_weight">1000|\\d{0,3}</string>
+    <string name="graph_weight_wrong">Weight must be between 0 and 1000</string>
+    <!--profile weight_fragment end-->
+
+    <!--profile height_fragment start-->
+    <string name="height_et_empty">Height is empty</string>
+
+    <string name="regex_graph_height">1000|\\d{0,3}</string>
+    <string name="graph_height_wrong">Height must be between 0 and 1000</string>
+    <!--profile weight_fragment end-->
 
 </resources>
