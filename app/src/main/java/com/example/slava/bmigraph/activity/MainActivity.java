@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements OnGraphSelectedLi
                                 public void onClick(DialogInterface dialog, int id) {
                                     App.getDbManager().insertData(input.getText().toString(),
                                             -1, -1);
+                                    initTabbedActivity();
                                     dialog.cancel();
                                 }
                             })
